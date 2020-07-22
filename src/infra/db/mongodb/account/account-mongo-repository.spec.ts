@@ -4,7 +4,7 @@ import { Collection } from 'mongodb'
 
 let accountCollection: Collection
 
-describe('Accout Mongo Repository', () => {
+describe('Account Mongo Repository', () => {
   beforeAll(async () => {
     await MongoHelper.connect(process.env.MONGO_URL)
   })
