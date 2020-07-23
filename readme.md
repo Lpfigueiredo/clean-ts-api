@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/Lpfigueiredo/clean-ts-api.svg?branch=master)](https://travis-ci.org/Lpfigueiredo/clean-ts-api)
+[![Coverage Status](https://coveralls.io/repos/github/Lpfigueiredo/clean-ts-api/badge.svg)](https://coveralls.io/github/Lpfigueiredo/clean-ts-api)
+
 # **Enquetes API**
 
 Essa API faz parte do treinamento do professor Rodrigo Manguinho (Mango) na Udemy.
