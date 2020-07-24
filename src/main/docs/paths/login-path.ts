@@ -3,6 +3,7 @@ export const loginPath = {
     tags: ['Login'],
     summary: 'API para autenticar usuário',
     requestBody: {
+      required: true,
       content: {
         'application/json': {
           schema: {
@@ -23,7 +24,16 @@ export const loginPath = {
         }
       },
       400: {
-        description: 'Bad Request'
+        $ref: '#/components/badRequest'
+      },
+      401: {
+        $ref: '#/components/unauthorized'
+      },
+      404: {
+        $ref: '#/components/notFound'
+      },
+      500: {
+        $ref: '#/components/serverError'
       }
     }
   }
