@@ -28,6 +28,7 @@ O objetivo do treinamento é mostrar como criar uma API com uma arquitetura bem 
 * Integração contínua e entrega contínua (CI/CD): TravisCI, Coveralls
 * Princípios de design e desenvolvimento: TDD, SOLID, KISS, YAGNI, DRY
 * Conteinerização: Docker
+* Documentação: Swagger
 * Provedor de serviço de nuvem: Heroku
 
 > ## Princípios
