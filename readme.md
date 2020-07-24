@@ -13,6 +13,23 @@ O objetivo do treinamento é mostrar como criar uma API com uma arquitetura bem 
 2. [Login](./requirements/login.md)
 3. [Criar enquete](./requirements/add-survey.md)
 
+> ## Resumo do projeto
+
+* Linguagem: TypeScript/JavaScript
+* Interpretador JavaScript: Node.js
+* Gerenciador de pacotes: npm
+* Controle de versão: Git
+* Repositório: GitHub
+* Banco de dados não-relacional: MongoDB
+* Arquitetura: Clean Architecture, API REST
+* Segurança: CORS, bcrypt
+* Autenticação: JWT
+* Testes unitários e de integração: Jest
+* Integração contínua e entrega contínua (CI/CD): TravisCI, Coveralls
+* Princípios de design e desenvolvimento: TDD, SOLID, KISS, YAGNI, DRY
+* Conteinerização: Docker
+* Provedor de serviço de nuvem: Heroku
+
 > ## Princípios
 
 * Single Responsibility Principle (SRP)
