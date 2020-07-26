@@ -13,6 +13,7 @@ O objetivo do treinamento é mostrar como criar uma API com uma arquitetura bem 
 2. [Login](./requirements/login.md)
 3. [Criar enquete](./requirements/add-survey.md)
 4. [Listar enquetes](./requirements/load-surveys.md)
+5. [Responder enquetes](./requirements/save-survey-result.md)
 
 > ## Resumo do projeto
 
