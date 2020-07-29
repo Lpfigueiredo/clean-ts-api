@@ -16,6 +16,9 @@ export const surveyPath = {
           }
         }
       },
+      204: {
+        description: 'Sucesso, mas sem dados para exibir'
+      },
       403: {
         $ref: '#/components/forbidden'
       },
