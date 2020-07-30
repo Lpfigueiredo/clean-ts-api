@@ -7,7 +7,7 @@ export default {
   info: {
     title: 'Enquetes API',
     description: 'Node.js Rest API usando TDD, Clean Architecture e Typescript.',
-    version: '1.3.0',
+    version: '1.6.0',
     contact: {
       name: 'Leonardo Figueiredo',
       url: 'https://www.linkedin.com/in/leonardo-paulo-figueiredo/'
