@@ -10,7 +10,21 @@ const makeFakeSurveyResultData = (): SaveSurveyResultModel => ({
   date: new Date()
 })
 
-const makeFakeSurveyResult = (): SurveyResultModel => Object.assign({}, makeFakeSurveyResultData(), { id: 'any_id' })
+const makeFakeSurveyResult = (): SurveyResultModel => ({
+  surveyId: 'any_survey_id',
+  question: 'any_question',
+  answers: [{
+    answer: 'any_answer',
+    count: 1,
+    percent: 50
+  }, {
+    answer: 'other_answer',
+    image: 'any_image',
+    count: 1,
+    percent: 50
+  }],
+  date: new Date()
+})
 
 const makeSaveSurveyResultRepository = (): SaveSurveyResultRepository => {
   class SaveSurveyResultRepositoryStub implements SaveSurveyResultRepository {
