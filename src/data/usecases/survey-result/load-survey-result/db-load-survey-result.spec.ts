@@ -4,11 +4,13 @@ import { SurveyModel } from '../../../../domain/models/survey'
 import MockDate from 'mockdate'
 
 const makeFakeSurvey = (): SurveyModel => ({
-  id: 'any_id',
+  id: 'any_survey_id',
   question: 'any_question',
   answers: [{
-    image: 'any_image',
     answer: 'any_answer'
+  }, {
+    answer: 'other_answer',
+    image: 'any_image'
   }],
   date: new Date()
 })
@@ -18,13 +20,13 @@ const makeFakeSurveyResult = (): SurveyResultModel => ({
   question: 'any_question',
   answers: [{
     answer: 'any_answer',
-    count: 1,
-    percent: 50
+    count: 0,
+    percent: 0
   }, {
     answer: 'other_answer',
     image: 'any_image',
-    count: 1,
-    percent: 50
+    count: 0,
+    percent: 0
   }],
   date: new Date()
 })
@@ -93,6 +95,13 @@ describe('DbLoadSurveyResult Usecase', () => {
     jest.spyOn(loadSurveyResultRepositoryStub, 'loadBySurveyId').mockReturnValueOnce(new Promise(resolve => resolve(null)))
     await sut.load('any_survey_id')
     expect(loadByIdSpy).toHaveBeenCalledWith('any_survey_id')
+  })
+
+  test('Should return SurveyResultModel with all answers with count 0 if LoadSurveyResultRepository returns null', async () => {
+    const { sut, loadSurveyResultRepositoryStub } = makeSut()
+    jest.spyOn(loadSurveyResultRepositoryStub, 'loadBySurveyId').mockReturnValueOnce(new Promise(resolve => resolve(null)))
+    const surveyResult = await sut.load('any_survey_id')
+    expect(surveyResult).toEqual(makeFakeSurveyResult())
   })
 
   test('Should return SurveyResultModel on success', async () => {
