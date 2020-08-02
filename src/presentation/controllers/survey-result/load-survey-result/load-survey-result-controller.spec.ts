@@ -1,8 +1,9 @@
 import { LoadSurveyResultController } from './load-survey-result-controller'
-import { HttpRequest, LoadSurveyById } from './load-survey-result-controller-protocols'
+import { HttpRequest, LoadSurveyById, LoadSurveyResult } from './load-survey-result-controller-protocols'
 import { SurveyModel } from '../../../../domain/models/survey'
 import { forbidden, serverError } from '../../../helpers/http/http-helper'
 import { InvalidParamError } from '../../../errors'
+import { SurveyResultModel } from '../../../../domain/models/survey-result'
 
 const makeFakeRequest = (): HttpRequest => ({
   params: {
@@ -29,17 +30,45 @@ const makeLoadSurveyById = (): LoadSurveyById => {
   return new LoadSurveyByIdStub()
 }
 
+const makeFakeSurveyResult = (): SurveyResultModel => ({
+  surveyId: 'any_survey_id',
+  question: 'any_question',
+  answers: [{
+    answer: 'any_answer',
+    count: 0,
+    percent: 0
+  }, {
+    answer: 'other_answer',
+    image: 'any_image',
+    count: 0,
+    percent: 0
+  }],
+  date: new Date()
+})
+
 interface SutTypes {
   sut: LoadSurveyResultController
   loadSurveyByIdStub: LoadSurveyById
+  loadSurveyResultStub: LoadSurveyResult
+}
+
+const makeLoadSurveyResult = (): LoadSurveyResult => {
+  class LoadSurveyResultStub implements LoadSurveyResult {
+    async load (surveyId: string): Promise<SurveyResultModel> {
+      return new Promise(resolve => resolve(makeFakeSurveyResult()))
+    }
+  }
+  return new LoadSurveyResultStub()
 }
 
 const makeSut = (): SutTypes => {
   const loadSurveyByIdStub = makeLoadSurveyById()
-  const sut = new LoadSurveyResultController(loadSurveyByIdStub)
+  const loadSurveyResultStub = makeLoadSurveyResult()
+  const sut = new LoadSurveyResultController(loadSurveyByIdStub, loadSurveyResultStub)
   return {
     sut,
-    loadSurveyByIdStub
+    loadSurveyByIdStub,
+    loadSurveyResultStub
   }
 }
 
@@ -65,5 +94,12 @@ describe('LoadSurveyResult Controller', () => {
     })
     const httpResponse = await sut.handle(makeFakeRequest())
     expect(httpResponse).toEqual(serverError(new Error()))
+  })
+
+  test('Should call LoadSurveyResult with correct value', async () => {
+    const { sut, loadSurveyResultStub } = makeSut()
+    const loadSpy = jest.spyOn(loadSurveyResultStub, 'load')
+    await sut.handle(makeFakeRequest())
+    expect(loadSpy).toHaveBeenCalledWith('any_id')
   })
 })
