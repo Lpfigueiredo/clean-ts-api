@@ -1,9 +1,11 @@
 [![Build Status](https://travis-ci.org/Lpfigueiredo/clean-ts-api.svg?branch=master)](https://travis-ci.org/Lpfigueiredo/clean-ts-api)
 [![Coverage Status](https://coveralls.io/repos/github/Lpfigueiredo/clean-ts-api/badge.svg)](https://coveralls.io/github/Lpfigueiredo/clean-ts-api)
 
-<a href="https://enquetes-api.herokuapp.com/docs/" target="_blank">
-  <img src=".github/enquetes-api-banner.png" />
-</a>
+<h1>
+  <a href="https://enquetes-api.herokuapp.com/docs/" target="_blank">
+    <img src=".github/enquetes-api-banner.png" />
+  </a>
+</h1>
 
 Essa API faz parte do treinamento do professor Rodrigo Manguinho na Udemy.
 
