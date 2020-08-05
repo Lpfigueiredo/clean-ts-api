@@ -1,9 +1,9 @@
 [![Build Status](https://travis-ci.org/Lpfigueiredo/clean-ts-api.svg?branch=master)](https://travis-ci.org/Lpfigueiredo/clean-ts-api)
 [![Coverage Status](https://coveralls.io/repos/github/Lpfigueiredo/clean-ts-api/badge.svg)](https://coveralls.io/github/Lpfigueiredo/clean-ts-api)
 
-<h1>
+<h1 align="center">
   <a href="https://enquetes-api.herokuapp.com/docs/" target="_blank">
-    <img src=".github/enquetes-api-banner.png" />
+    <img src=".github/enquetes-api-banner.png" alt="Enquetes API" />
   </a>
 </h1>
 
@@ -169,4 +169,4 @@ O objetivo do treinamento é mostrar como criar uma API com uma arquitetura bem 
 
 ---
 
-<h4 align=center>Feito de 💜 por: <a href="https://www.linkedin.com/in/leonardo-paulo-figueiredo/">Leonardo Paulo Figueiredo</a></h4>
+<h4 align="center">Feito de 💜 por: <a href="https://www.linkedin.com/in/leonardo-paulo-figueiredo/">Leonardo Paulo Figueiredo</a></h4>
