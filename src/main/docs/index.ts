@@ -21,10 +21,12 @@ export default {
     url: '/api'
   }],
   tags: [{
-    name: 'Login'
+    name: 'Login',
+    description: 'APIs relacionadas a Login'
   },
   {
-    name: 'Enquete'
+    name: 'Enquete',
+    description: 'APIs relacionadas a Enquete'
   }],
   paths,
   schemas,

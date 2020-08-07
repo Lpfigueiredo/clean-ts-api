@@ -5,6 +5,7 @@ export const surveyResultPath = {
     }],
     tags: ['Enquete'],
     summary: 'API para responder uma enquete',
+    description: 'Essa rota só pode ser executada por **usuários autenticados**',
     parameters: [{
       in: 'path',
       name: 'surveyId',
