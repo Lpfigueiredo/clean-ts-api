@@ -32,7 +32,7 @@ O objetivo do treinamento é mostrar como criar uma API com uma arquitetura bem 
 * Segurança: CORS, bcrypt
 * Autenticação: JWT
 * Testes unitários e de integração: Jest
-* Integração contínua e entrega contínua (CI/CD): TravisCI, Coveralls
+* Integração contínua e entrega contínua (CI/CD): Jenkins, TravisCI, Coveralls
 * Princípios de design e desenvolvimento: TDD, SOLID, KISS, YAGNI, DRY
 * Conteinerização: Docker
 * Documentação: Swagger
