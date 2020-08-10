@@ -36,6 +36,7 @@ O objetivo do treinamento é mostrar como criar uma API com uma arquitetura bem 
 * Princípios de design e desenvolvimento: TDD, SOLID, KISS, YAGNI, DRY
 * Conteinerização: Docker
 * Documentação: Swagger
+* Proxy reverso: Nginx
 * Provedor de serviço de nuvem: Heroku
 
 > ## Princípios
